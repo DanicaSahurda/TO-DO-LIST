@@ -18,9 +18,4 @@ $tasks = $db->query("SELECT * FROM tasks ORDER BY created_at DESC")->fetchAll();
 <ul>
     <?php foreach ($tasks as $task): ?>
         <li>
-            <?= htmlspecialchars($task['task']) ?>
-        </li>
-    <?php endforeach; ?>
-</ul>
-</body>
-</html>
+            <?= htmlspecialchars($task['tas
