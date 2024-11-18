@@ -8,6 +8,7 @@ $tasks = $db->query("SELECT * FROM tasks ORDER BY created_at DESC")->fetchAll();
 <head>
 <meta charset="UTF-8">
 <title>To-Do List</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>To-Do List</h1>
@@ -18,4 +19,10 @@ $tasks = $db->query("SELECT * FROM tasks ORDER BY created_at DESC")->fetchAll();
 <ul>
     <?php foreach ($tasks as $task): ?>
         <li>
-            <?= htmlspecialchars($task['tas
+            <?= htmlspecialchars($task['task']) ?>
+            <a href="edit_task.php?id=<?= $task['id'] ?>">Edit</a>
+        </li>
+    <?php endforeach; ?>
+</ul>
+</body>
+</html>
